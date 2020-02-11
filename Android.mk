@@ -1,6 +1,18 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := CameraPackage
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := system/priv-app/CameraPackage/CameraPackage.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := OnePlusCamera
 LOCAL_MODULE_OWNER := oneplus
 LOCAL_MODULE_TAGS := optional
@@ -9,6 +21,7 @@ LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_OVERRIDES_PACKAGES := SnapdragonCamera Camera2 Snap
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 

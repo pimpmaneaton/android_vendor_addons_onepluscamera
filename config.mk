@@ -1,4 +1,5 @@
 PRODUCT_PACKAGES += \
+    CameraPackage \
     OnePlusCamera \
     OnePlusCameraService \
     oneplus-framework-res \
